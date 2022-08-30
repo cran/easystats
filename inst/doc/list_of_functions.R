@@ -1,0 +1,60 @@
+## ----message=FALSE, warning=FALSE, include=FALSE------------------------------
+options(
+  knitr.kable.NA = "",
+  digits = 2
+)
+
+knitr::opts_chunk$set(
+  comment = ">",
+  dpi = 450,
+  message = FALSE,
+  warning = FALSE
+)
+
+## ----echo=FALSE, results='asis'-----------------------------------------------
+# it would be cool to add the title / description for all functions
+library(insight)
+library(datawizard)
+library(bayestestR)
+library(parameters)
+library(performance)
+library(correlation)
+library(effectsize)
+library(modelbased)
+library(see)
+library(report)
+
+all_funs <- c()
+
+for (package in easystats:::.packages_on_cran()) {
+  fns <- ls(paste0("package:", package))
+
+  all_fns <- as.data.frame(
+    readRDS(paste0(find.package(package), "/help/aliases.rds"))
+  )
+
+  all_fns <- rownames_as_column(all_fns)
+  names(all_fns) <- c("func", "file")
+
+  all_fns <- data_filter(all_fns, func %in% fns)
+  all_fns$file <- paste0(all_fns$file, ".html")
+
+  functions <- apply(all_fns, 1, function(x) {
+    paste0(
+      "[**`",
+      x[1],
+      "`**](https://easystats.github.io/",
+      package,
+      "/reference/",
+      x[2],
+      ") *(",
+      package,
+      ")*"
+    )
+  })
+
+  all_funs <- c(all_funs, functions)
+}
+
+cat(paste0(c("", sort(all_funs)), collapse = "\n- "))
+

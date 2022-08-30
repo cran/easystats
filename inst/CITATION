@@ -1,0 +1,21 @@
+bibentry(
+  bibtype="Article",
+  title="easystats: Framework for Easy Statistical Modeling, Visualization, and Reporting",
+  author=c(
+  person("Daniel", "Lüdecke"),
+  person("Mattan S.", "Ben-Shachar"),
+  person("Indrajeet", "Patil"),
+  person("Brenton M.", "Wiernik"),
+  person("Dominique", "Makowski")
+  ),
+  journal="CRAN",
+  year="2022",
+  note="R package",
+  url="https://easystats.github.io/easystats/",
+
+  textVersion =
+    paste("Lüdecke, Patil, Ben-Shachar, Wiernik, & Makowski (2022). easystats: Framework for Easy Statistical Modeling, Visualization, and Reporting. CRAN.",
+          "Available from https://easystats.github.io/easystats/"
+    ),
+  mheader = "To cite datawizard in publications use:"
+)
