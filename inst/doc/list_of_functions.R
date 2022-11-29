@@ -23,8 +23,9 @@ library(effectsize)
 library(modelbased)
 library(see)
 library(report)
+library(easystats)
 
-all_funs <- c()
+all_funs <- NULL
 
 for (package in easystats:::.packages_on_cran()) {
   fns <- ls(paste0("package:", package))

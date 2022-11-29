@@ -21,16 +21,16 @@
 #' @return Invisible `NULL`.
 #'
 #' @examples
-#' \dontrun{
-#' # install latest development-version of easystats packages from
-#' # the r-universe repository, but only those packages that have newer
-#' # versions available
-#' install.latest()
+#' if (FALSE) {
+#'   # install latest development-version of easystats packages from
+#'   # the r-universe repository, but only those packages that have newer
+#'   # versions available
+#'   install_latest()
 #'
-#' # install all latest development-version of easystats packages from
-#' # the r-universe repository, no matter whether local installations
-#' # are up to date or not.
-#' install.latest(force = TRUE)
+#'   # install all latest development-version of easystats packages from
+#'   # the r-universe repository, no matter whether local installations
+#'   # are up to date or not.
+#'   install_latest(force = TRUE)
 #' }
 #' @export
 install_latest <- function(source = c("development", "cran"),
@@ -38,12 +38,14 @@ install_latest <- function(source = c("development", "cran"),
                            force = FALSE,
                            verbose = TRUE) {
   source <- match.arg(source, c("development", "cran"))
-  pkg <- c(
-    "insight", "datawizard", "bayestestR", "performance", "parameters",
-    "effectsize", "correlation", "modelbased", "see", "report"
-  )
+  pkg <- .packages_on_cran()
+  install_all_packages <- FALSE
 
-  if (all(packages == "all")) {
+  if (length(packages) == 1L && packages == "all") {
+    install_all_packages <- TRUE
+  }
+
+  if (install_all_packages) {
     packages <- pkg
   } else {
     packages <- intersect(packages, pkg)
@@ -75,7 +77,7 @@ install_latest <- function(source = c("development", "cran"),
       colnames(easy_pkgs) <- c("Package", "Latest", "Installed", "behind")
       easy_pkgs <- easy_pkgs[easy_pkgs$behind, ]
       cat(insight::print_color("\nInstalling following packages:\n\n", "blue"))
-      cat(insight::export_table(easy_pkgs[c("Package", "Latest", "Installed")]))
+      cat(insight::export_table(easy_pkgs[c("Package", "Installed", "Latest")]))
       cat("\n\n")
     }
   }
