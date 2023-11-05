@@ -1,9 +1,9 @@
-.onAttach <- function(...) {
+.onAttach <- function(libname, pkgname) {
   easystats_versions <- .easystats_version()
   easystats_pkgs <- .packages_on_cran()
   needed <- easystats_pkgs[!.is_attached(easystats_pkgs)]
 
-  if (length(needed) == 0) {
+  if (length(needed) == 0L) {
     return()
   }
 
@@ -44,7 +44,7 @@
 
   final_message <- paste0(final_message, "\n")
 
-  # adapted from {cli} pakcage
+  # adapted from {cli} package
   is_latex_output <- function() {
     if (!("knitr" %in% loadedNamespaces())) {
       return(FALSE)
@@ -65,11 +65,9 @@
     # symbol_warning <- "\u26A0 "
     symbol_tick <- "\u2714 "
     symbol_warning <- "\u2716 "
-    symbol_info <- "\u2139 "
   } else {
     symbol_tick <- "\u221A "
     symbol_warning <- "x "
-    symbol_info <- "i "
   }
 
   for (i in seq_len(nrow(easystats_versions))) {
@@ -81,12 +79,18 @@
 
     final_message <- paste0(
       final_message,
-      insight::color_text(format(easystats_versions$package[i], width = max_len_pkg), theme_color),
+      insight::color_text(
+        format(easystats_versions$package[i], width = max_len_pkg),
+        theme_color
+      ),
       " ",
-      insight::color_text(format(easystats_versions$local[i], width = max_len_ver), ifelse(needs_update[i], "red", "green"))
+      insight::color_text(
+        format(easystats_versions$local[i], width = max_len_ver),
+        ifelse(needs_update[i], "red", "green")
+      )
     )
 
-    if (i %% 2 == 0) {
+    if (i %% 2 == 0L) {
       final_message <- paste0(final_message, "\n")
     } else {
       final_message <- paste0(final_message, "   ")
@@ -96,7 +100,10 @@
   if (any(needs_update)) {
     final_message <- paste0(
       final_message,
-      insight::color_text("\nRestart the R-Session and update packages in red with `easystats::easystats_update()`.\n", "yellow")
+      insight::color_text(
+        "\nRestart the R-Session and update packages with `easystats::easystats_update()`.\n",
+        "yellow"
+      )
     )
   }
 

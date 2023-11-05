@@ -50,19 +50,18 @@ To cite the package, run the following command:
 
 ``` r
 citation("easystats")
-
 To cite easystats in publications use:
 
-  Lüdecke, Patil, Ben-Shachar, Wiernik, & Makowski (2022). easystats:
-  Framework for Easy Statistical Modeling, Visualization, and
-  Reporting. CRAN. Available from
+  Lüdecke, Patil, Ben-Shachar, Wiernik, Bacher, Thériault, & Makowski
+  (2022). easystats: Framework for Easy Statistical Modeling,
+  Visualization, and Reporting. CRAN. Available from
   https://easystats.github.io/easystats/
 
 A BibTeX entry for LaTeX users is
 
   @Article{,
     title = {easystats: Framework for Easy Statistical Modeling, Visualization, and Reporting},
-    author = {Daniel Lüdecke and Mattan S. Ben-Shachar and Indrajeet Patil and Brenton M. Wiernik and Dominique Makowski},
+    author = {Daniel Lüdecke and Mattan S. Ben-Shachar and Indrajeet Patil and Brenton M. Wiernik and Etienne Bacher and Rémi Thériault and Dominique Makowski},
     journal = {CRAN},
     year = {2022},
     note = {R package},
@@ -195,9 +194,9 @@ which does have a substantial number of dependencies.
 
 ### Total downloads
 
-| Total      | insight   | datawizard | parameters | bayestestR | performance | effectsize | correlation | see     | modelbased | report | easystats |
-|:-----------|:----------|:-----------|:-----------|:-----------|:------------|:-----------|:------------|:--------|:-----------|:-------|:----------|
-| 11,550,342 | 3,546,674 | 1,540,947  | 1,526,547  | 1,525,916  | 1,444,319   | 1,188,782  | 317,076     | 285,076 | 105,577    | 62,549 | 6,879     |
+| Total      | insight   | datawizard | parameters | bayestestR | performance | effectsize | correlation | see     | modelbased | report  | easystats |
+|:-----------|:----------|:-----------|:-----------|:-----------|:------------|:-----------|:------------|:--------|:-----------|:--------|:----------|
+| 17,954,605 | 5,434,033 | 3,106,920  | 2,194,492  | 2,113,023  | 2,099,008   | 1,669,569  | 523,713     | 431,562 | 227,630    | 124,933 | 29,722    |
 
 ### Trend
 

@@ -2,7 +2,7 @@ Type: Package
 Package: easystats
 Title: Framework for Easy Statistical Modeling, Visualization, and
         Reporting
-Version: 0.6.0
+Version: 0.7.0
 Authors@R: 
     c(person(given = "Daniel",
              family = "Lüdecke",
@@ -28,7 +28,14 @@ Authors@R:
              family = "Wiernik",
              role = "aut",
              email = "brenton@wiernik.org",
-             comment = c(ORCID = "0000-0001-9560-6336", Twitter = "@bmwiernik")))
+             comment = c(ORCID = "0000-0001-9560-6336", Twitter = "@bmwiernik")),
+      person("Etienne", "Bacher", , "etienne.bacher@protonmail.com", role = "aut",
+             comment = c(ORCID = "0000-0002-9271-5075")),
+      person(given = "Rémi", 
+             family = "Thériault",
+             role = "aut", 
+             email = "remi.theriault@mail.mcgill.ca",
+             comment = c(ORCID = "0000-0003-4315-6788", Twitter = "@rempsyc")))
 Maintainer: Daniel Lüdecke <d.luedecke@uke.de>
 Description: A meta-package that installs and loads a set of packages from 
     'easystats' ecosystem in a single step. This collection of packages provide 
@@ -37,25 +44,25 @@ Description: A meta-package that installs and loads a set of packages from
     teaching 'easystats', and a dashboard targeted at new R users for easily 
     conducting statistical analysis by accessing summary results, model fit indices, 
     and visualizations with minimal programming.
-License: GPL-3
+License: MIT + file LICENSE
 URL: https://easystats.github.io/easystats/
 BugReports: https://github.com/easystats/easystats/issues
 Depends: R (>= 3.6)
-Imports: bayestestR (>= 0.13.0), correlation (>= 0.8.3), datawizard (>=
-        0.6.4), effectsize (>= 0.8.2), insight (>= 0.18.8), modelbased
-        (>= 0.8.5), parameters (>= 0.20.0), performance (>= 0.10.1),
-        report (>= 0.5.1), see (>= 0.7.4), tools, utils
-Suggests: DT, flexdashboard (>= 0.6.0), jsonlite, knitr, rmarkdown,
-        rvest, testthat (>= 3.1.0), withr, xml2
+Imports: bayestestR (>= 0.13.1), correlation (>= 0.8.4), datawizard (>=
+        0.9.0), effectsize (>= 0.8.6), insight (>= 0.19.6), modelbased
+        (>= 0.8.6), parameters (>= 0.21.3), performance (>= 0.10.8),
+        report (>= 0.5.7), see (>= 0.8.1), tools, utils
+Suggests: DT, flexdashboard (>= 0.6.2), jsonlite, knitr, mockery,
+        rmarkdown, testthat (>= 3.1.10), withr, xml2
 VignetteBuilder: knitr
 Encoding: UTF-8
 Language: en-US
-RoxygenNote: 7.2.2
+RoxygenNote: 7.2.3.9000
 Config/testthat/edition: 3
 Config/Needs/website: rstudio/bslib, r-lib/pkgdown,
         easystats/easystatstemplate
 NeedsCompilation: no
-Packaged: 2022-11-29 21:39:29 UTC; Daniel
+Packaged: 2023-11-05 13:46:33 UTC; Daniel
 Author: Daniel Lüdecke [aut, cre] (<https://orcid.org/0000-0002-8895-3206>,
     @strengejacke),
   Dominique Makowski [aut] (<https://orcid.org/0000-0001-5375-9967>,
@@ -64,6 +71,9 @@ Author: Daniel Lüdecke [aut, cre] (<https://orcid.org/0000-0002-8895-3206>,
   Indrajeet Patil [aut] (<https://orcid.org/0000-0003-1995-6531>,
     @patilindrajeets),
   Brenton M. Wiernik [aut] (<https://orcid.org/0000-0001-9560-6336>,
-    @bmwiernik)
+    @bmwiernik),
+  Etienne Bacher [aut] (<https://orcid.org/0000-0002-9271-5075>),
+  Rémi Thériault [aut] (<https://orcid.org/0000-0003-4315-6788>,
+    @rempsyc)
 Repository: CRAN
-Date/Publication: 2022-11-29 22:00:02 UTC
+Date/Publication: 2023-11-05 15:10:02 UTC

@@ -39,11 +39,17 @@ to show the current list of suggested packages for each 'easystats'
 package.
 }
 \examples{
-\dontrun{
-install_suggested("easystats")
+\dontshow{if (require("xml2", quietly = TRUE)) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+
+# download all suggested packages
+if (FALSE) {
+  install_suggested("easystats")
+}
 
 # listing all reverse dependencies of easystats packages
 show_reverse_dependencies()
-}
 
+# listing all soft/weak dependencies of easystats packages
+show_suggested()
+\dontshow{\}) # examplesIf}
 }

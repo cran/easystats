@@ -1,4 +1,16 @@
-## ----message=FALSE, warning=FALSE, include=FALSE------------------------------
+## ----setup, message=FALSE, warning=FALSE, include=FALSE-----------------------
+library(insight)
+library(datawizard)
+library(bayestestR)
+library(parameters)
+library(performance)
+library(correlation)
+library(effectsize)
+library(modelbased)
+library(see)
+library(report)
+library(easystats)
+
 options(
   knitr.kable.NA = "",
   digits = 2
@@ -13,30 +25,16 @@ knitr::opts_chunk$set(
 
 ## ----echo=FALSE, results='asis'-----------------------------------------------
 # it would be cool to add the title / description for all functions
-library(insight)
-library(datawizard)
-library(bayestestR)
-library(parameters)
-library(performance)
-library(correlation)
-library(effectsize)
-library(modelbased)
-library(see)
-library(report)
-library(easystats)
 
 all_funs <- NULL
 
 for (package in easystats:::.packages_on_cran()) {
   fns <- ls(paste0("package:", package))
+  rds_filepath <- file.path(find.package(package), "help", "aliases.rds")
 
-  all_fns <- as.data.frame(
-    readRDS(paste0(find.package(package), "/help/aliases.rds"))
-  )
-
+  all_fns <- as.data.frame(readRDS(rds_filepath))
   all_fns <- rownames_as_column(all_fns)
   names(all_fns) <- c("func", "file")
-
   all_fns <- data_filter(all_fns, func %in% fns)
   all_fns$file <- paste0(all_fns$file, ".html")
 
