@@ -2,7 +2,7 @@ Type: Package
 Package: easystats
 Title: Framework for Easy Statistical Modeling, Visualization, and
         Reporting
-Version: 0.7.0
+Version: 0.7.1
 Authors@R: 
     c(person(given = "Daniel",
              family = "Lüdecke",
@@ -48,21 +48,21 @@ License: MIT + file LICENSE
 URL: https://easystats.github.io/easystats/
 BugReports: https://github.com/easystats/easystats/issues
 Depends: R (>= 3.6)
-Imports: bayestestR (>= 0.13.1), correlation (>= 0.8.4), datawizard (>=
-        0.9.0), effectsize (>= 0.8.6), insight (>= 0.19.6), modelbased
-        (>= 0.8.6), parameters (>= 0.21.3), performance (>= 0.10.8),
-        report (>= 0.5.7), see (>= 0.8.1), tools, utils
+Imports: bayestestR (>= 0.13.2), correlation (>= 0.8.4), datawizard (>=
+        0.10.0), effectsize (>= 0.8.6), insight (>= 0.19.10),
+        modelbased (>= 0.8.7), parameters (>= 0.21.6), performance (>=
+        0.11.0), report (>= 0.5.8), see (>= 0.8.3), tools, utils
 Suggests: DT, flexdashboard (>= 0.6.2), jsonlite, knitr, mockery,
-        rmarkdown, testthat (>= 3.1.10), withr, xml2
+        rmarkdown, testthat (>= 3.2.1), withr, xml2
 VignetteBuilder: knitr
 Encoding: UTF-8
 Language: en-US
-RoxygenNote: 7.2.3.9000
+RoxygenNote: 7.3.1
 Config/testthat/edition: 3
 Config/Needs/website: rstudio/bslib, r-lib/pkgdown,
         easystats/easystatstemplate
 NeedsCompilation: no
-Packaged: 2023-11-05 13:46:33 UTC; Daniel
+Packaged: 2024-03-27 13:56:00 UTC; mail
 Author: Daniel Lüdecke [aut, cre] (<https://orcid.org/0000-0002-8895-3206>,
     @strengejacke),
   Dominique Makowski [aut] (<https://orcid.org/0000-0001-5375-9967>,
@@ -76,4 +76,4 @@ Author: Daniel Lüdecke [aut, cre] (<https://orcid.org/0000-0002-8895-3206>,
   Rémi Thériault [aut] (<https://orcid.org/0000-0003-4315-6788>,
     @rempsyc)
 Repository: CRAN
-Date/Publication: 2023-11-05 15:10:02 UTC
+Date/Publication: 2024-03-28 08:10:02 UTC

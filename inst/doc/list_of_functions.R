@@ -29,7 +29,7 @@ knitr::opts_chunk$set(
 all_funs <- NULL
 
 for (package in easystats:::.packages_on_cran()) {
-  fns <- ls(paste0("package:", package))
+  fns <<- ls(paste0("package:", package))
   rds_filepath <- file.path(find.package(package), "help", "aliases.rds")
 
   all_fns <- as.data.frame(readRDS(rds_filepath))

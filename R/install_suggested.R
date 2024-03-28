@@ -76,7 +76,7 @@ show_suggested <- function(package = "easystats") {
     if (length(x[[p]])) {
       sep <- strrep("-", nchar(p))
       insight::print_color(paste0(p, "\n", sep, "\n"), "red")
-      cat(insight::format_message(paste(x[[p]], collapse = ", ")))
+      cat(insight::format_message(toString(x[[p]])))
       cat("\n\n")
     }
   }
@@ -100,7 +100,7 @@ show_reverse_dependencies <- function(package = "easystats") {
     if (length(x[[p]])) {
       sep <- strrep("-", nchar(p))
       insight::print_color(paste0(p, "\n", sep, "\n"), "red")
-      cat(insight::format_message(paste(x[[p]], collapse = ", ")))
+      cat(insight::format_message(toString(x[[p]])))
       cat("\n\n")
     }
   }
@@ -166,8 +166,8 @@ show_reverse_dependencies <- function(package = "easystats") {
 .find_reverse_dependencies <- function(package) {
   insight::check_if_installed("xml2")
 
-  url <- paste0("https://cloud.r-project.org/web/packages/", package, "/")
-  html_page <- xml2::read_html(url)
+  pkg_url <- paste0("https://cloud.r-project.org/web/packages/", package, "/")
+  html_page <- xml2::read_html(pkg_url)
   elements <- xml2::as_list(html_page)
   rev_import_field <- elements$html$body$div[[15]][[1]][[3]]
 
