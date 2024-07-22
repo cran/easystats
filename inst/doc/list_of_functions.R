@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
 
 all_funs <- NULL
 
-for (package in easystats:::.packages_on_cran()) {
+for (package in easystats::easystats_packages()) {
   fns <<- ls(paste0("package:", package))
   rds_filepath <- file.path(find.package(package), "help", "aliases.rds")
 
@@ -55,5 +55,5 @@ for (package in easystats:::.packages_on_cran()) {
   all_funs <- c(all_funs, functions)
 }
 
-cat(paste0(c("", sort(all_funs)), collapse = "\n- "))
+cat(paste(c("", sort(all_funs)), collapse = "\n- "))
 

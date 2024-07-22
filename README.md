@@ -5,8 +5,6 @@
 
 [![downloads](https://cranlogs.r-pkg.org/badges/easystats)](https://cran.r-project.org/package=easystats)
 [![total](https://cranlogs.r-pkg.org/badges/grand-total/easystats)](https://cranlogs.r-pkg.org/)
-[![status](https://tinyverse.netlify.com/badge/easystats)](https://CRAN.R-project.org/package=easystats)
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 
 ## What is *easystats*?
 
@@ -20,7 +18,7 @@ challenge, do check if there is an *easystats* answer for it in other
 packages. You will slowly uncover how using them together facilitates
 your life. And, who knows, you might even end up using them all.
 
-<img src="man/figures/logo_wall.png" width="100%" />
+<img src="man/figures/logo_wall.png" width="433px" style="display: block; margin: auto;" />
 
 ## Installation
 
@@ -29,11 +27,11 @@ your life. And, who knows, you might even end up using them all.
 badge](https://easystats.r-universe.dev/badges/easystats)](https://easystats.r-universe.dev)
 [![R-CMD-check](https://github.com/easystats/easystats/workflows/R-CMD-check/badge.svg?branch=main)](https://github.com/easystats/easystats/actions)
 
-| Type | Source | Command |
-|----|----|----|
-| Release | CRAN | `install.packages("easystats")` |
+| Type        | Source     | Command                                                                     |
+|-------------|------------|-----------------------------------------------------------------------------|
+| Release     | CRAN       | `install.packages("easystats")`                                             |
 | Development | r-universe | `install.packages("easystats", repos = "https://easystats.r-universe.dev")` |
-| Development | GitHub | `remotes::install_github("easystats/easystats")` |
+| Development | GitHub     | `remotes::install_github("easystats/easystats")`                            |
 
 Finally, as *easystats* sometimes depends on some additional packages
 for specific functions that are not downloaded by default. If you want
@@ -54,8 +52,9 @@ To cite easystats in publications use:
 
   Lüdecke, Patil, Ben-Shachar, Wiernik, Bacher, Thériault, & Makowski
   (2022). easystats: Framework for Easy Statistical Modeling,
-  Visualization, and Reporting. CRAN. Available from
-  https://easystats.github.io/easystats/
+  Visualization, and Reporting. CRAN.
+  doi:10.32614/CRAN.package.easystats
+  <https://doi.org/10.32614/CRAN.package.easystats>
 
 A BibTeX entry for LaTeX users is
 
@@ -63,6 +62,7 @@ A BibTeX entry for LaTeX users is
     title = {easystats: Framework for Easy Statistical Modeling, Visualization, and Reporting},
     author = {Daniel Lüdecke and Mattan S. Ben-Shachar and Indrajeet Patil and Brenton M. Wiernik and Etienne Bacher and Rémi Thériault and Dominique Makowski},
     journal = {CRAN},
+    doi = {https://doi.org/10.32614/CRAN.package.easystats},
     year = {2022},
     note = {R package},
     url = {https://easystats.github.io/easystats/},
@@ -194,9 +194,9 @@ which does have a substantial number of dependencies.
 
 ### Total downloads
 
-| Total | insight | datawizard | parameters | performance | bayestestR | effectsize | correlation | see | modelbased | report | easystats |
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| 21,909,603 | 6,454,097 | 3,850,771 | 2,676,811 | 2,588,318 | 2,554,678 | 2,019,852 | 659,469 | 553,598 | 319,193 | 178,541 | 54,275 |
+| Total      | insight   | datawizard | parameters | performance | bayestestR | effectsize | correlation | see     | modelbased | report  | easystats |
+|:-----------|:----------|:-----------|:-----------|:------------|:-----------|:-----------|:------------|:--------|:-----------|:--------|:----------|
+| 22,854,679 | 6,693,662 | 4,046,677  | 2,785,758  | 2,708,389   | 2,646,105  | 2,105,088  | 697,969     | 577,345 | 342,849    | 189,930 | 60,907    |
 
 ### Trend
 
