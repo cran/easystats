@@ -18,7 +18,7 @@ challenge, do check if there is an *easystats* answer for it in other
 packages. You will slowly uncover how using them together facilitates
 your life. And, who knows, you might even end up using them all.
 
-<img src="man/figures/logo_wall.png" width="433px" style="display: block; margin: auto;" />
+<img src="man/figures/logo_wall.png" width="600px" style="display: block; margin: auto;" />
 
 ## Installation
 
@@ -27,11 +27,11 @@ your life. And, who knows, you might even end up using them all.
 badge](https://easystats.r-universe.dev/badges/easystats)](https://easystats.r-universe.dev)
 [![R-CMD-check](https://github.com/easystats/easystats/workflows/R-CMD-check/badge.svg?branch=main)](https://github.com/easystats/easystats/actions)
 
-| Type        | Source     | Command                                                                     |
-|-------------|------------|-----------------------------------------------------------------------------|
-| Release     | CRAN       | `install.packages("easystats")`                                             |
+| Type | Source | Command |
+|:---|:---|:---|
+| Release | CRAN | `install.packages("easystats")` |
 | Development | r-universe | `install.packages("easystats", repos = "https://easystats.r-universe.dev")` |
-| Development | GitHub     | `remotes::install_github("easystats/easystats")`                            |
+| Development | GitHub | `remotes::install_github("easystats/easystats")` |
 
 Finally, as *easystats* sometimes depends on some additional packages
 for specific functions that are not downloaded by default. If you want
@@ -62,7 +62,7 @@ A BibTeX entry for LaTeX users is
     title = {easystats: Framework for Easy Statistical Modeling, Visualization, and Reporting},
     author = {Daniel Lüdecke and Mattan S. Ben-Shachar and Indrajeet Patil and Brenton M. Wiernik and Etienne Bacher and Rémi Thériault and Dominique Makowski},
     journal = {CRAN},
-    doi = {https://doi.org/10.32614/CRAN.package.easystats},
+    doi = {10.32614/CRAN.package.easystats},
     year = {2022},
     note = {R package},
     url = {https://easystats.github.io/easystats/},
@@ -146,6 +146,31 @@ Moreover, the *easystats* packages are very lightweight, with a minimal
 set of dependencies, which again makes it great if you want to rely on
 them.
 
+**What are all the packages for? I’m lost!**
+
+Statistical models are **scary monsters**, and *easystats* is the best
+solution for expert and amateur stats hunters.
+
+- **insight** contains the arsenal to capture them and dissect them. It
+  is mostly meant to be used by experts who want to create their own
+  tools.
+- **performance** can be used to assess their scariness and value.
+- **effectsize** is great to quantify and interpret their dangerousness
+  (e.g., by how much variance they eat).
+- **parameters** is useful to understand them by measuring their claws
+  and taming them.
+- **modelbased** allows you to unleash their power and use them at your
+  service.
+- **datawizard** contains useful potions and hunter equipment to survive
+  in the stats jungle.
+- **bayestestR** contains specific arrows and traps for a particular
+  species of monsters (the monstrous Bayesians)
+- **see** allows you to see clearer.
+
+However, *easystats* can be used as a whole, by simply loading
+`library(easystats)` and using the functions from various packages
+without caring where they belong.
+
 ## Documentation
 
 ### Websites
@@ -194,13 +219,13 @@ which does have a substantial number of dependencies.
 
 ### Total downloads
 
-| Total      | insight   | datawizard | parameters | performance | bayestestR | effectsize | correlation | see     | modelbased | report  | easystats |
-|:-----------|:----------|:-----------|:-----------|:------------|:-----------|:-----------|:------------|:--------|:-----------|:--------|:----------|
-| 22,854,679 | 6,693,662 | 4,046,677  | 2,785,758  | 2,708,389   | 2,646,105  | 2,105,088  | 697,969     | 577,345 | 342,849    | 189,930 | 60,907    |
+| Total | insight | datawizard | parameters | performance | bayestestR | effectsize | correlation | see | modelbased | report | easystats |
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+| 26,629,680 | 7,638,142 | 4,767,236 | 3,231,627 | 3,172,865 | 3,086,221 | 2,440,389 | 857,553 | 686,715 | 430,645 | 234,846 | 83,441 |
 
 ### Trend
 
-<img src="man/figures/unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-6-1.png" width="100%" style="display: block; margin: auto;" />
 
 <!-- ### Average monthly downloads -->
 

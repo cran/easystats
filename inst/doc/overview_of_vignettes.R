@@ -1,10 +1,11 @@
 ## ----message=FALSE, warning=FALSE, include=FALSE------------------------------
-options(knitr.kable.NA = "", digits = 2)
-
+library(knitr)
 knitr::opts_chunk$set(
-  comment = ">",
-  dpi = 450,
+  echo = TRUE,
+  collapse = TRUE,
+  warning = FALSE,
   message = FALSE,
-  warning = FALSE
+  comment = "#>",
+  eval = TRUE
 )
 
