@@ -6,6 +6,9 @@
 #'
 #' @return Invisible `NULL`.
 #'
+#' @details If package `{pak}` is installed, `pak::pkg_install()` will be used
+#' to install packages. Else, `utils::install.packages()` is used.
+#'
 #' @examplesIf FALSE
 #' # check which local easystats-packages (and their dependencies)
 #' # are out of date and install updates from CRAN
@@ -15,8 +18,8 @@
 #' easystats_update("core")
 #'
 #' @export
-easystats_update <- function(which = c("all", "core", "deps")) {
-  which <- match.arg(which)
+easystats_update <- function(which = "all") {
+  which <- insight::validate_argument(which, c("all", "core", "deps"))
 
   if (which %in% c("all", "core")) {
     core <- .easystats_version()

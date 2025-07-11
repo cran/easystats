@@ -4,7 +4,7 @@
 \alias{easystats_update}
 \title{Update \emph{easystats}-packages and its dependencies from CRAN, if necessary.}
 \usage{
-easystats_update(which = c("all", "core", "deps"))
+easystats_update(which = "all")
 }
 \arguments{
 \item{which}{String, indicates whether easystats-packages (\code{which = "core"}),
@@ -16,6 +16,10 @@ Invisible \code{NULL}.
 }
 \description{
 Update \emph{easystats}-packages and its dependencies from CRAN, if necessary.
+}
+\details{
+If package \code{{pak}} is installed, \code{pak::pkg_install()} will be used
+to install packages. Else, \code{utils::install.packages()} is used.
 }
 \examples{
 \dontshow{if (FALSE) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
